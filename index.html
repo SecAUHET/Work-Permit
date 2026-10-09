@@ -822,16 +822,19 @@ body.lang-ur .other-task-note .note-ar{display:none;}
 .optional-note{margin-top:7px;color:#64748b;font-size:11px;font-weight:800;text-align:center}
 .signature-frame.required-missing,.id-upload-card.required-missing{border-color:#ef4444!important;background:linear-gradient(180deg,#fff7f7,#fff)!important;box-shadow:0 0 0 4px rgba(239,68,68,.13)!important}
 .signature-frame.required-missing .missing-note,.id-upload-card.required-missing .missing-note{display:block}
-.crop-modal-card{max-width:920px;max-height:94vh;overflow:auto;-webkit-overflow-scrolling:touch;border-top:8px solid #b9985a;background:linear-gradient(180deg,#fffaf0,#ffffff)}
+#idCropModal{padding: max(10px,env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left));height:100vh;height:100dvh;box-sizing:border-box;align-items:center}
+.crop-modal-card{width:100%;min-width:0;max-width:920px;height:min(820px,100%);max-height:100%;display:flex;flex-direction:column;overflow:hidden;-webkit-overflow-scrolling:touch;border-top:8px solid #b9985a;background:linear-gradient(180deg,#fffaf0,#ffffff)}
 .crop-modal-card h3{margin:0 0 8px;color:#101b2f}.crop-help{margin:0 0 12px;color:#64748b;font-size:13px;font-weight:850;line-height:1.45}
-.crop-stage{position:relative;width:100%;height:min(64vh,620px);min-height:360px;border:1px solid #d7dde7;border-radius:20px;background:#111827;overflow:hidden;display:grid;place-items:center;touch-action:none;user-select:none}
+.crop-stage{position:relative;width:100%;min-width:0;flex:1 1 0;height:auto;min-height:0;border:1px solid #d7dde7;border-radius:20px;background:#111827;overflow:hidden;display:grid;place-items:center;touch-action:none;user-select:none}
 .crop-stage img{max-width:100%;max-height:100%;object-fit:contain;display:block;pointer-events:none;-webkit-user-drag:none;user-select:none}
 .crop-box{position:absolute;border:3px solid #b9985a;box-shadow:0 0 0 9999px rgba(0,0,0,.48),0 12px 28px rgba(0,0,0,.25);border-radius:14px;cursor:move;touch-action:none;display:block!important;z-index:5!important;pointer-events:auto!important;user-select:none}
 .crop-box:before,.crop-box:after{content:"";position:absolute;inset:33.333% 0 auto 0;border-top:1px dashed rgba(255,255,255,.72)}.crop-box:after{inset:66.666% 0 auto 0}
 .crop-grid-v1,.crop-grid-v2{position:absolute;top:0;bottom:0;border-left:1px dashed rgba(255,255,255,.72);pointer-events:none}.crop-grid-v1{left:33.333%}.crop-grid-v2{left:66.666%}
 .crop-handle{position:absolute;width:20px;height:20px;border-radius:50%;background:#ffffff;border:3px solid #b9985a;box-shadow:0 3px 10px rgba(0,0,0,.25);z-index:8!important;touch-action:none!important;pointer-events:auto!important}.crop-handle.nw{left:-11px;top:-11px;cursor:nwse-resize}.crop-handle.ne{right:-11px;top:-11px;cursor:nesw-resize}.crop-handle.sw{left:-11px;bottom:-11px;cursor:nesw-resize}.crop-handle.se{right:-11px;bottom:-11px;cursor:nwse-resize}
-.crop-toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-top:12px}.crop-toolbar .left,.crop-toolbar .right{display:flex;gap:8px;flex-wrap:wrap}.crop-small-btn{border:1px solid #d7dde7;background:#fff;color:#101b2f;border-radius:999px;padding:9px 12px;font-size:12px;font-weight:950;cursor:pointer}.crop-primary-btn{background:#101b2f!important;color:#fff!important;border-color:#101b2f!important}
-@media(max-width:760px){.id-panel-frame{padding:12px}.id-panel-frame .upload-btn,.id-panel-frame .remove-media-btn{width:100%;margin-right:0}.crop-modal-card{padding:14px}.crop-stage{height:48vh;min-height:280px}.crop-toolbar,.crop-toolbar .left,.crop-toolbar .right{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%}.crop-small-btn,.crop-toolbar .btn{width:100%;min-height:44px;margin:0!important;padding:0 10px!important;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;text-align:center}}
+.crop-toolbar{flex:0 0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-top:12px}.crop-toolbar .left,.crop-toolbar .right{display:flex;gap:8px;flex-wrap:wrap}.crop-small-btn{border:1px solid #d7dde7;background:#fff;color:#101b2f;border-radius:999px;padding:9px 12px;font-size:12px;font-weight:950;cursor:pointer}.crop-primary-btn{background:#101b2f!important;color:#fff!important;border-color:#101b2f!important}
+@media(max-width:760px){.id-panel-frame{padding:12px}.id-panel-frame .upload-btn,.id-panel-frame .remove-media-btn{width:100%;margin-right:0}.crop-modal-card{padding:12px;border-radius:18px}.crop-modal-card h3{font-size:18px;flex:0 0 auto}.crop-help{font-size:12px;line-height:1.35;margin-bottom:8px;flex:0 0 auto}.crop-stage{height:auto;min-height:0;border-radius:14px}.crop-toolbar{display:grid;grid-template-columns:1fr;gap:8px;width:100%;margin-top:8px}.crop-toolbar .left,.crop-toolbar .right{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;width:100%}.crop-small-btn,.crop-toolbar .btn{width:100%;min-height:44px;margin:0!important;padding:0 10px!important;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;text-align:center}}
+
+@media(max-height:500px){.crop-modal-card{padding:10px}.crop-modal-card h3{font-size:16px;margin-bottom:4px}.crop-help{font-size:11px;line-height:1.25;margin-bottom:6px}.crop-toolbar{margin-top:6px;gap:6px}.crop-toolbar .left,.crop-toolbar .right{gap:6px}}
 
 
 /* ID upload button reliability fix */
@@ -871,12 +874,12 @@ button.upload-btn{font-family:inherit;line-height:1;appearance:none;-webkit-appe
   object-position:center center!important;
 }
 @media(max-width:760px){
-  .id-frame{height:285px!important;min-height:285px!important;padding:18px!important}
-  .id-frame .id-preview-bg{transform:scale(.96)!important}
+  .id-upload-card,.id-panel-frame{min-width:0;max-width:100%;box-sizing:border-box}
+  .id-frame{width:100%!important;height:auto!important;min-height:0!important;aspect-ratio:1.586;padding:12px!important;box-sizing:border-box}
+  .id-frame .id-preview-bg{transform:none!important;min-width:0;min-height:0}
 }
 @media(max-width:420px){
-  .id-frame{height:245px!important;min-height:245px!important;padding:16px!important}
-  .id-frame .id-preview-bg{transform:scale(.96)!important}
+  .id-frame{padding:10px!important}
 }
 
 
@@ -1180,7 +1183,7 @@ body.pdf-generating-progress{
 <script type="application/json" id="permitExportDataSeed">{
   "meta": {
     "reportType": "Contractors / Vendors Permit to Work - Events",
-    "savedAt": "2026-10-09T13:04:03.375Z",
+    "savedAt": "2026-10-09T13:15:07.415Z",
     "version": "Property corporate v11"
   },
   "fields": {
@@ -2917,13 +2920,14 @@ function fitCropImageToStage(){
   const img=document.getElementById('idCropImage');
   const stage=document.getElementById('idCropStage');
   if(!img || !stage || !img.naturalWidth || !img.naturalHeight) return null;
-  const sr=stage.getBoundingClientRect();
-  if(!sr.width || !sr.height) return null;
-  const scale=Math.min(sr.width/img.naturalWidth, sr.height/img.naturalHeight);
+  const width=stage.clientWidth;
+  const height=stage.clientHeight;
+  if(!width || !height) return null;
+  const scale=Math.min(width/img.naturalWidth, height/img.naturalHeight);
   const w=Math.max(1,img.naturalWidth*scale);
   const h=Math.max(1,img.naturalHeight*scale);
-  const left=(sr.width-w)/2;
-  const top=(sr.height-h)/2;
+  const left=(width-w)/2;
+  const top=(height-h)/2;
   img.style.position='absolute';
   img.style.left=left+'px';
   img.style.top=top+'px';
@@ -2931,7 +2935,7 @@ function fitCropImageToStage(){
   img.style.height=h+'px';
   img.style.maxWidth='none';
   img.style.maxHeight='none';
-  img.style.objectFit='fill';
+  img.style.objectFit='contain';
   return {left,top,width:w,height:h};
 }
 
@@ -2986,7 +2990,7 @@ function pointerPosInStage(ev){
   const stage=document.getElementById('idCropStage');
   const sr=stage.getBoundingClientRect();
   const p=(ev?.touches&&ev.touches[0])||(ev?.changedTouches&&ev.changedTouches[0])||ev;
-  return {x:(p?.clientX||0)-sr.left,y:(p?.clientY||0)-sr.top};
+  return {x:(p?.clientX||0)-sr.left-stage.clientLeft,y:(p?.clientY||0)-sr.top-stage.clientTop};
 }
 
 function startCropPointer(ev){
