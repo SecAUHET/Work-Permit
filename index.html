@@ -831,10 +831,12 @@ body.lang-ur .other-task-note .note-ar{display:none;}
 .crop-box:before,.crop-box:after{content:"";position:absolute;inset:33.333% 0 auto 0;border-top:1px dashed rgba(255,255,255,.72)}.crop-box:after{inset:66.666% 0 auto 0}
 .crop-grid-v1,.crop-grid-v2{position:absolute;top:0;bottom:0;border-left:1px dashed rgba(255,255,255,.72);pointer-events:none}.crop-grid-v1{left:33.333%}.crop-grid-v2{left:66.666%}
 .crop-handle{position:absolute;width:20px;height:20px;border-radius:50%;background:#ffffff;border:3px solid #b9985a;box-shadow:0 3px 10px rgba(0,0,0,.25);z-index:8!important;touch-action:none!important;pointer-events:auto!important}.crop-handle.nw{left:-11px;top:-11px;cursor:nwse-resize}.crop-handle.ne{right:-11px;top:-11px;cursor:nesw-resize}.crop-handle.sw{left:-11px;bottom:-11px;cursor:nesw-resize}.crop-handle.se{right:-11px;bottom:-11px;cursor:nwse-resize}
-.crop-toolbar{flex:0 0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-top:12px}.crop-toolbar .left,.crop-toolbar .right{display:flex;gap:8px;flex-wrap:wrap}.crop-small-btn{border:1px solid #d7dde7;background:#fff;color:#101b2f;border-radius:999px;padding:9px 12px;font-size:12px;font-weight:950;cursor:pointer}.crop-primary-btn{background:#101b2f!important;color:#fff!important;border-color:#101b2f!important}
-@media(max-width:760px){.id-panel-frame{padding:12px}.id-panel-frame .upload-btn,.id-panel-frame .remove-media-btn{width:100%;margin-right:0}.crop-modal-card{padding:12px;border-radius:18px}.crop-modal-card h3{font-size:18px;flex:0 0 auto}.crop-help{font-size:12px;line-height:1.35;margin-bottom:8px;flex:0 0 auto}.crop-stage{height:auto;min-height:0;border-radius:14px}.crop-toolbar{display:grid;grid-template-columns:1fr;gap:8px;width:100%;margin-top:8px}.crop-toolbar .left,.crop-toolbar .right{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;width:100%}.crop-small-btn,.crop-toolbar .btn{width:100%;min-height:44px;margin:0!important;padding:0 10px!important;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;text-align:center}}
+.crop-toolbar{flex:0 0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;width:100%;margin-top:10px}.crop-toolbar .left,.crop-toolbar .right{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;min-width:0}.crop-toolbar button{box-sizing:border-box;width:100%;min-width:0!important;min-height:40px!important;margin:0!important;padding:6px 8px!important;font-size:12px!important;line-height:1.2!important;border-radius:12px!important;display:flex;align-items:center;justify-content:center;white-space:normal!important;overflow-wrap:anywhere;text-align:center;touch-action:manipulation}.crop-small-btn{border:1px solid #d7dde7;background:#fff;color:#101b2f;font-weight:950;cursor:pointer}.crop-primary-btn{background:#101b2f!important;color:#fff!important;border-color:#101b2f!important}
+@media(max-width:760px){.id-panel-frame{padding:12px}.id-panel-frame .upload-btn,.id-panel-frame .remove-media-btn{width:100%;margin-right:0}.crop-modal-card{padding:12px;border-radius:18px}.crop-modal-card h3{font-size:18px;flex:0 0 auto}.crop-help{font-size:12px;line-height:1.35;margin-bottom:8px;flex:0 0 auto}.crop-stage{height:auto;min-height:0;border-radius:14px}.crop-toolbar{display:grid;grid-template-columns:1fr;gap:8px;width:100%;margin-top:8px}.crop-toolbar .left,.crop-toolbar .right{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;width:100%}}
 
 @media(max-height:500px){.crop-modal-card{padding:10px}.crop-modal-card h3{font-size:16px;margin-bottom:4px}.crop-help{font-size:11px;line-height:1.25;margin-bottom:6px}.crop-toolbar{margin-top:6px;gap:6px}.crop-toolbar .left,.crop-toolbar .right{gap:6px}}
+
+@media(min-width:560px) and (max-height:500px){.crop-toolbar{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 
 /* ID upload button reliability fix */
@@ -1183,7 +1185,7 @@ body.pdf-generating-progress{
 <script type="application/json" id="permitExportDataSeed">{
   "meta": {
     "reportType": "Contractors / Vendors Permit to Work - Events",
-    "savedAt": "2026-10-09T13:15:07.415Z",
+    "savedAt": "2026-10-09T13:21:15.895Z",
     "version": "Property corporate v11"
   },
   "fields": {
